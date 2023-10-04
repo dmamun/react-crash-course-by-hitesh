@@ -10,6 +10,7 @@ import Layout from './Layout';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
+import User from './User';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,15 +18,19 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<Home></Home>
+        element:<Home></Home>,
       },
       {
         path:"/about",
-        element:<About></About>
+        element:<About></About>,
       },
       {
         path:"/contact",
-        element:<Contact></Contact>
+        element:<Contact></Contact>,
+      },
+      {
+        path:"user/:id",
+        element:<User></User>,
       }
     ]
   },
